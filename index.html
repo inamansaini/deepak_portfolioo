@@ -314,6 +314,86 @@
             color: #0ef;
             transition: 2s ease;
         }
+
+        /* ============================================= */
+        /* ===== MOBILE RESPONSIVE FIX ADDED HERE ===== */
+        /* ============================================= */
+        @media (max-width: 768px) {
+            /* Slightly reduce base font size on mobile */
+            html {
+                font-size: 55%; 
+            }
+
+            /* Adjust header padding for smaller screens */
+            .header {
+                padding: 2rem 5%;
+            }
+            
+            /* Adjust navbar link margin to prevent overflow */
+            .navbar a {
+                margin-left: 2.5rem;
+            }
+
+            /* --- Home Section --- */
+            /* Stack image and content vertically (image on top) */
+            .home {
+                flex-direction: column-reverse; 
+                text-align: center;
+                padding-top: 15rem; /* Add padding to clear fixed header */
+            }
+            .home-img img {
+                width: 70vw; /* Make image larger and manageable */
+                margin-bottom: 4rem; /* Add space below image */
+            }
+            .home-content h1 {
+                font-size: 5rem; /* Adjust heading size */
+            }
+            .home-content h3 {
+                font-size: 3rem; /* Adjust heading size */
+            }
+
+            /* --- About Section --- */
+            /* Stack image and content vertically */
+            .about-img {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-img img {
+                width: 70vw; /* Match home image size */
+                margin-bottom: 3rem;
+            }
+            .about-content {
+                text-align: center;
+            }
+            .about-content h2 {
+                text-align: center; /* Override desktop's 'text-align: left' */
+            }
+
+            /* --- Services Section --- */
+            .services h2 {
+                margin-bottom: 3rem;
+            }
+            /* Make service containers full-width and stack them */
+            .services-container {
+                display: flex; /* Change from inline-flex */
+                width: 100%;   /* Change from fixed 350px */
+                height: auto;  /* Change from fixed 250px */
+                margin-bottom: 3rem; /* Add space between stacked boxes */
+            }
+
+            /* --- Portfolio Section --- */
+            /* Change 3-column grid to 1-column grid */
+            .portfolio-container {
+                grid-template-columns: 1fr;
+            }
+
+            /* --- Contact Section --- */
+            /* Stack form inputs instead of side-by-side */
+            .contact form .input-box input {
+                width: 100%;
+            }
+        }
+
     </style>
 </head>
 <body>
